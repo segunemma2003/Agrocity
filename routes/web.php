@@ -18,3 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/decision', function(){
+    return view('forms.decision');
+});
+Route::get('/farmers/forms', function(){
+    return view('forms.form');
+});
+Route::get('/farmers/dashboard',function(){
+    return view('dashboard.farmers.index');
+});
+Route::get('/investors/dashboard',function(){
+    return view('dashboard.investors.index');
+});
