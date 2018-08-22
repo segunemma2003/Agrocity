@@ -48,7 +48,7 @@
 						</div>
 						<div id="success"></div>
 						<!-- For success/fail message-->
-						<button type="submit" class=" btn botton">Send Message</button>
+						<button type="submit" class=" btnn">Send Message</button>
 					<div class="clearfix"></div>	
 					</form>
 				</div>
