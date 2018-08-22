@@ -15,7 +15,8 @@ body {
 
 /* Remove extra left and right margins, due to padding */
 .row {
-	margin: 0 -5px;
+  margin: 0 -5px;
+  padding: 20px;
 }
 
 /* Clear floats after the columns */
@@ -36,14 +37,16 @@ body {
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-  padding: 16px;
+  padding: 80px;
   text-align: center;
   background-color: #fff;
+  border: none;
 }
 
 .card-title {
-	text-align: center;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
 
 .card-img {
@@ -65,6 +68,7 @@ body {
   color: #ecf0f1;
   transition: background-color .3s;
   margin-top: 60px;
+  border-radius: 50px;
 }
 
 .btn:hover, .btn:focus {
@@ -139,4 +143,26 @@ body {
 .partners-logo {
 	width: 80px;
 	height: 80px;
+}
+
+.btnn {
+  position: relative;
+  display: block;
+  margin: 30px auto;
+  padding: 0;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #006838;
+  color: #ecf0f1;
+  transition: background-color .3s;
+  margin-top: 60px;
+  width: 40%;
+  height: 50px;
+}
+
+.partners-section {
+  margin-bottom: 20px;
 }

@@ -16,7 +16,9 @@
     <div class="container">
       <h1 class="display-3 mb-1">AGROCITY</h1>
       <p class="lead"> <span>The No1 Farmer's choice</span></p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <div class="cta-btn">
+		    <button class="btn red" type="button"><span>Apply as farmers</span></button>
+	    </div>
     </div>
   </div>
 <!--josh-->
