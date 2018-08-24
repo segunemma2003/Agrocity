@@ -30,3 +30,4 @@ Route::get('/farmers/dashboard',function(){
 Route::get('/investors/dashboard',function(){
     return view('dashboard.investors.index');
 });
+Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
