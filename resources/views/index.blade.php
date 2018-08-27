@@ -1,24 +1,19 @@
 @extends('layout.master')
 @section('content')
-<!-- <div class="container">
-<div class="emoji">
-    <div class="jumbotron">
-        <div class="text-center">
-        <h1>Agrocity</h1>
-        <p>This is the Official page for Agrocity. An independent Agricultural platform for farmers are in ire needs of arable farmlands for the cultivation of crops
-        
-</div>
-        </div>
-    </div>
-</div> -->
 <div class="jumbotron  bg-cover">
     <div class="overlay"></div>
     <div class="container">
-      <h1 class="display-3 mb-1">AGROCITY</h1>
-      <p class="lead"> <span>The No1 Farmer's choice</span></p>
-      <div class="cta-btn">
-		    <button class="btn red" type="button"><span>Apply as farmers</span></button>
-	    </div>
+      <div class="row" style="padding-top: 100px;">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <h1 class="jumboh">AGROCITY</h1>
+          <p class="jumbop">Do you want to get a farm?</p>
+          <p class="jumbop">Do you want to sponsor or invest in farm and make money?</p>
+          <p class="jumbop">Do you want to get fund for your farming?</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <button class="jumbo-button btn " type="button"><span>Apply now</span></button>
+        </div>
+      </div>
     </div>
   </div>
 <!--josh-->
@@ -59,40 +54,12 @@
 <!--End of What we do container-->
 
 <div>
-	<div class="cta-btn">
+	<!-- <div class="cta-btn">
 		<button class="btn red" type="button"><span>Apply as farmers</span></button>
-	</div>
-	<div class="partners-section">
-		<h2 class="card-title">Our partners</h2>
-
-		<div class="ro">
-		  <div class="colum">
-		    <div class="car">
-		    	<img src="{{ asset('assets/images/cowry.jpg') }}" class="partners-logo">
-		    </div>
-		  </div>
-
-		  <div class="colum">
-		    <div class="car">
-		    	<img src="{{ asset('assets/images/ighub.jpg') }}" class="partners-logo">
-		    </div>
-		  </div>
-		  
-		  <div class="colum">
-		    <div class="car">
-		    	<img src="{{ asset('assets/images/abia.jpg') }}" class="partners-logo">
-		    </div>
-		  </div>
-		  
-		  <div class="colum">
-		    <div class="car">
-		    	<img src="{{ asset('assets/images/cowry.jpg') }}" class="partners-logo">
-		    </div>
-		  </div>
-		</div>
-
-	</div>
+	</div> -->
 </div>
+
+
 
 
 @endsection

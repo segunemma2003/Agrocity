@@ -6,7 +6,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Float four columns side by side */
 .column {
   float: left;
   width: 33.3%;
@@ -107,39 +106,6 @@ body {
   transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
-/*Partners section*/
-/* Float four columns side by side */
-.colum {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.ro {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.ro:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .colum {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Style the counter cards */
-.car {
-  padding: 16px;
-  text-align: center;
-}
-
 .partners-logo {
 	width: 80px;
 	height: 80px;
@@ -166,3 +132,18 @@ body {
 .partners-section {
   margin-bottom: 20px;
 }
+
+.images {  
+  display: flex; 
+  margin: auto;
+  padding: auto;
+}
+
+img {  
+  margin: 5px; 
+}
+
+.cta-btn-section {
+  background-color: #f8f9fa !important;
+}
+

@@ -11,14 +11,19 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto ">
             <li class="nav-item">
-              <a class="nav-link link" href="#">Sign up
+              <a class="nav-link link" href="#">About us
                 <span class="sr-only"></span>
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link link" href="#">How it works</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link link" href="#">Log in</a>
             </li>
-            
+            <!-- <li class="nav-item" style="margin-left: 15px;">
+              <a class="nav-link link" href="www.this.com"><button class="nav-button">Sign Up</button></a>
+            </li> -->
           </ul>
         </div>
       </div>

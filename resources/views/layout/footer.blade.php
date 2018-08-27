@@ -16,20 +16,21 @@
     </div> -->
     <section id="footer">
 		<div class="container">
-			<div class="row text-center  ">
+			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-6 sign drop-pad">
-                <h3>Contact Info</h3>
-					<p>For further information on the investment opportunity, please contact any of the following .</p>
-					<ul class="text-justify">
+                <h3>About Agrocity</h3>
+                	<p>Agrocity is a branch of sefapcol. An omline Agri platform that alots lands to farmers and conects them to prospective investors at giving them support.</p>
+					<p style="text-align: left;">For further information on the investment opportunity, please contact any of the following .</p>
+					<ul style="margin: 0px">
 						<li><i class="fa fa-map-marker" aria-hidden="true"></i><strong>Address</strong> : Ibeku street, Umuahia, Abia state <span>Nigeria.</span></li>
-						<li><i class="fa fa-envelope" aria-hidden="true"></i><strong>Email</strong>  : <a href="#" style="color:black;">info@sefapcol.com</a></li>
+						<li><i class="fa fa-envelope" aria-hidden="true"></i><strong>Email</strong>  : <a href="#">info@sefapcol.com</a></li>
 						<li><i class="fa fa-phone" aria-hidden="true"></i><strong>Phone </strong> : +2348024438577, +2348034877615</li>
 					</ul>
 				</div>
 
 				<div class="col-xs-12 col-sm-6 col-md-6 drop-pad login-pad">
                 <h3>Drop Us A Message</h3>
-					<form action="#" method="get" name="sentMessage" id="contactForm" novalidate>
+					<form action="#" method="get" name="sentMessage" id="contactForm" novalidate style="color: #000">
 					<div class="control-group form-group">
 						<div class="controls">
 							<input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
@@ -37,15 +38,14 @@
 					</div>
 					<div class="control-group form-group">
 						<div class="controls">
-							<input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email address.">
+							<input type="email" class="form-control" placeholder="Email" style="border: none;" id="email" required data-validation-required-message="Please enter your email address.">
 						</div>
 					</div>
-						<!-- <label class="checkbox"><input type="checkbox" name="checkbox" checked>Subscribe to our Newsletter</label> -->
-						<div class="control-group form-group">
-							<div class="controls">
-								<textarea rows="5" cols="30" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-							</div>
+					<div class="control-group form-group">
+						<div class="controls">
+							<textarea rows="5" cols="30" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
 						</div>
+					</div>
 						<div id="success"></div>
 						<!-- For success/fail message-->
 						<button type="submit" class=" btnn">Send Message</button>
@@ -71,7 +71,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
                 <p>&copy; 2018 SEFAPCOL. All Rights Reserved | Design by <a href="http://ighub.com.ng"> Innovation Growth Hub (igHub). </a></p>
-</div>
+				</div>
 				</hr>
 			</div>	
 		</div>
