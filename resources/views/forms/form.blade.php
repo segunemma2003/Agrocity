@@ -33,7 +33,12 @@
                   <img src="{{ asset('assets/images/agrocity.jpg')}}" >
                 </div>
            -->
-                <form id="msform" name="msform" novalidate method="post" enctype="form-data/multipart">
+           @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+           @endif
+                <form id="msform" name="msform" novalidate method="post" enctype="multipart/form-data">
                     @csrf
                     <!--progress bar-->
                     <ul id="progressbar">
@@ -50,9 +55,9 @@
                     <fieldset>
                     <h2 class="fs-title">Personal Details</h2>
                     <h3 class="fs-subtitle">All fields are required</h3>
-                    <input type="text" name="fname" id="fname" placeholder=" First Name" required/> 
-                    <input type="text" name="mname" id="mname" placeholder="Middle Name" />
-                    <input type="text" name="lname" placeholder="Last Name" required/>
+                    <input type="text" name="fname" id="fname" value="{{$user->name}}" required/> 
+                    <!-- <input type="text" name="mname" id="mname" placeholder="Middle Name" />
+                    <input type="text" name="lname" placeholder="Last Name" required/> -->
                     <input type="text" name="phone" placeholder="Phone" required/>
                     <div class="row">
                         <div class="co-md-4">
@@ -133,12 +138,12 @@
                         <h2 class="fs-title">Business Profiles</h2>
                         <small id="help" class="form-text text-muted">All fields are required</small>
                         <br></br>
-                        <input  class="required" type="text"name="support" placeholder="Supporting Organization(If any)" required/>
+                        <input  class="required" type="text"name="support" placeholder="Supporting Organization(If any)" value="none" required/>
                         <input type="text" name="group" placeholder="Farmers Group/COO" required/>
                         <input type="text" name="land" placeholder="Land Size" required/>
                         <input type="text" name="ward" placeholder="Ward/Farmsite Location" required/>
                         <input type="text" name="crop" placeholder="Crop Produced" required/>
-                        <input type="text" name="geolocation" placeholder="Geolocation" required/>
+                      <!--   <input type="text" name="geolocation" placeholder="Geolocation" required/> -->
                         <small id="help" class="form-text text-muted">Please ensure the informations provided are correct</small>
                         <input type="button" name="previous" class="previous action-button" value="Previous"/>
                         <input type="button" name="next" class="next action-button" value="Next"/>

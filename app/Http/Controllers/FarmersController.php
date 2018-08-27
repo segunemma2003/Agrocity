@@ -57,31 +57,35 @@ class FarmersController extends Controller
         $regcert=$this->get_pictures('regcert', $request);
         $idcard=$this->get_pictures('idcard', $request);
         $farmers=new Farmers;
-        $farmers->phone=$request->phone,
-        $farmers->gender=$request->gender,
-        $farmers->town=$request->town,
-        $farmers->state=$request->state,
-        $farmers->lga=$request->lga,
-        $farmers->support=$request->support,
-        $farmers->group=$request->group,
-        $farmers->land=$request->land,
-        $farmers->ward=$request->ward,
-        $farmers->crop=$request->crop,
-        $farmers->bank=$request->bank,
-        $farmers->accountno=$request->accountno,
-        $farmers->bvn=$request->bvn,
-        $farmers->rname=$request->rname,
-        $farmers->address=$request->raddress,
-        $farmers->rphone=$request->rphone,
-        $farmers->idcard=$idcard
-        $farmers->regcert=$regcert
-        $farmers->certificates=$certificates
-        $farmers->passport=$passport
-        $farmers->pixreferee=$pixreferee
-        $farmers->nepareferee=$nepareferee
-        if($farmers-?save()){
+        $farmers->phone=$request->phone;
+        $farmers->gender=$request->gender;
+        $farmers->town=$request->town;
+        $farmers->state=$request->state;
+        $farmers->lga=$request->lga;
+        $farmers->support=$request->support;
+        $farmers->group=$request->group;
+        $farmers->land=$request->land;
+        $farmers->ward=$request->ward;
+        $farmers->crop=$request->crop;
+        $farmers->bank=$request->bank;
+        $farmers->accountno=$request->accountno;
+        $farmers->bvn=$request->bvn;
+        $farmers->rname=$request->rname;
+        $farmers->address=$request->raddress;
+        $farmers->rphone=$request->rphone;
+        $farmers->idcard=$idcard;
+        $farmers->regcert=$regcert;
+        $farmers->certificates=$certificates;
+        $farmers->passport=$passport;
+        $farmers->pixreferee=$pixreferee;
+        $farmers->nepareferee=$nepareferee;
+        if($farmers->save()){
             Session::flash('msg',"you are welcome");
             return redirect("/farmers/dashboard");
+        }
+        else{
+            Session::flash('msg','error while inputing data. Make sure you are logged in');
+            return redirect()->back();
         }
   
     }

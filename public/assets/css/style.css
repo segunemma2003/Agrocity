@@ -130,3 +130,13 @@ background: -webkit-linear-gradient(left, rgba(17,69,1,1) 0%, rgba(80,161,8,1) 1
     color: #fff;
     margin-bottom: 50px;
 }
+
+.farmers-table {
+    margin: auto;
+    width: 80%;
+}
+
+
+.customer-logos {
+    display: flex;
+}

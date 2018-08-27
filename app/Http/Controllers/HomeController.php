@@ -25,13 +25,13 @@ class HomeController extends Controller
     public function index()
     {
         if(Auth::user()->user_type==null){
-            return view('forms.decision');
+            return redirect('/decision');
         }else if(Auth::user()->user_type=="farmer"){
             return redirect('/farmers/dashboard');    
         }
         
         else if(Auth::user()->user_type=="investor"){
-            return view('/investors/dashboard');   
+            return view('/farmers/dashboard');   
         }
         return redirect('/login');
     }
@@ -39,18 +39,19 @@ class HomeController extends Controller
         $user =Auth::user();
         // dd($user->user_type);
         $user->user_type=$request->user_type;
-        // dd($user->save());
-        if($user->save()){
-            if($user->type=="farmer")
-            {
+        $user->save();
+
+        if($request->user_type=="farmer"){
+            
+            
                 Session::flash('msg',"Successfully a Farmer");
-                return redirect('/farmers/forms')->with("user",$user);
-            }
-            else if($user->type=="investor"){
-                Session::flash('msg',"Successfully an Investor");
-                return view('/investors/dashboard')->with("user",$user);   
-            }
+                return redirect('/farmers/forms')->with(["user"=>$user]);
         }
+            else if($request->user_type=="investor"){
+                Session::flash('msg',"Successfully an Investor");
+                return redirect('/farmers/dashboard')->with("user",$user);   
+            }
+        
         else if(!$user->save()){
         Session::flash('warning',"Not Successful");
         return redirect()->back();

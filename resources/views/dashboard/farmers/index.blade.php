@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.master')
 @section('content')
-<div class="content-wrapper">
+ <div class="content-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
