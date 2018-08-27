@@ -1,0 +1,200 @@
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0; font-size:20px;}
+
+/* origina */
+
+/*body{
+    background-image: url("{{ asset('assets/images/agrocity.jpg')}}") no-repeat;
+    background-size:cover;
+}
+*/
+/* form styles */
+.radio{
+    width: 5% !important;
+}
+.dd{
+    width: 80%;
+    float: right;
+}
+#msform{
+    width:800px;
+    margin:50px auto;
+    text-align:center;
+    opacity:0.8;
+    position:relative;
+    /*background-color:red;*/
+    /*height:500px;*/
+    /*z-index:-2;*/
+
+}
+#msform fieldset{
+    background:white;
+    border:0 none;
+    border-radius:3px;
+    box-shadow:0 0 15px 1px rgba(0,0,0,0.4 );
+    padding:20px 30px;
+    box-sizing:border-box;
+    width:80%;
+    margin:0 10%;
+    /* stacking fieldsets above each other*/
+    position:absolute;
+}
+#msform fieldset:not(:first-of-type){
+    display:none;
+}
+.upload{
+    padding:7px !important;
+    border:1px solid #ccc;
+    border-radius:none!important;
+    margin-bottom:10px;
+    width:100%;
+    
+    box-sizing:border-box;
+    font-family:montserrat;
+    color:#2c3e50;
+    background-color:white;
+
+    font-size:13px;
+}
+label {
+    /* Other styling.. */
+    text-align: right;
+    clear: both;
+    /* float:right; */
+    margin-right:15px;
+    margin-top:10px;
+    font-family:montserrat;
+    color:#2c3e50;
+    font-size:13px;
+}
+/* hide all except the first fieldset */
+/* #msform fieldset:not(:first-of-type){
+    display:none;
+} */
+.in{
+    margin-left:20px;
+}
+/* inputs */
+#msform input, msform textarea{
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:3px;
+    margin-bottom:10px;
+    width:100%;
+    box-sizing:border-box;
+    font-family:montserrat;
+    color:#2c3e50;
+    font-size:13px;
+}
+/* buttons */
+#msform .action-button{
+    width:100px;
+    background:#27AE60;
+    font-weight:bold;
+    color:white;
+    border:0 none;
+    border-radius:1px;
+    cursor:pointer;
+    padding:10px 5px;
+    margin:10px 5px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus{
+    box-shadow:0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+/* headings */
+.fs-title{
+    font-size:15px;
+    text-transform:uppercase;
+    color:#2c3e50;
+    margin-bottom:10px;
+
+}
+
+.fs-subtitle{
+    font-weight:normal;
+    font-size:13px;
+    color:#666;
+    margin-bottom:20px;
+}
+
+/* progress bar */
+#progressbar{
+    margin-bottom:30px;
+    overflow:hidden;
+    /* css counters to number steps */
+    counter-reset:step;
+}
+
+#progressbar li{
+    list-style-type:none;
+    color:#27AE60;
+    text-transform:uppercase;
+    font-size:9px;
+    width:20%;
+    float:left;
+    position:relative;
+}
+#progressbar li:before{
+    content:counter(step);
+    counter-increment:step;
+    width:20px;
+    line-height:20px;
+    display:block;
+    font-size:10px;
+    color:#27AE60;
+    background:white;
+    border-radius:4px;
+    margin:0 auto 5px auto;
+    border: 2px solid #27AE60
+
+}
+
+/* progress bar connectors */
+#progressbar li:after{
+    content:'';
+    width:100%;
+    height:2px;
+    background:#27AE60;;
+    position:absolute;
+    left:-50%;
+    top:9px;
+    z-index:-1;
+ /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/* marking active/completed steps green */
+/* the number of stepps and the connector before it is greeen */
+#progressbar li.active:before, #progressbar li.active:after{
+    background:#27AE60;
+    Color:white;
+}
+input.required:before {
+    content: "* ";
+}
+.drop{
+    width:100px;
+    background:white;
+    font-weight:bold;
+    color:white;
+    border:1px #27AE60;
+    border-radius:1px;
+    cursor:pointer;
+    padding:10px 5px;
+    margin:10px 5px;
+}
+span{
+    margin:0px auto;
+    width:100%;
+    font-family:montserrat;
+    color:#2c3e50;
+    font-size:13px;
+    
+}

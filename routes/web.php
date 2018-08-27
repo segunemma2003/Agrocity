@@ -21,13 +21,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/decision', function(){
     return view('forms.decision');
 });
+Route::post('/decision','HomeController@decision');
 Route::get('/farmers/forms', function(){
     return view('forms.form');
 });
+Route::post('/farmers/forms','FarmersController@store');
 Route::get('/farmers/dashboard',function(){
     return view('dashboard.farmers.index');
-});
+})->name('farmers.index');
 Route::get('/investors/dashboard',function(){
     return view('dashboard.investors.index');
-});
+})->name('investors.index');
 Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
