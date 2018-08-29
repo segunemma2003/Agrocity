@@ -26,7 +26,7 @@ Route::get('/farmers/forms', function(){
 	$user=Auth::user();
     return view('forms.form',compact('user'));
 })->middleware('auth');
-Route::post('/farmers/forms','FarmersController@store');
+Route::post('/farmers/forms','FarmersController@store')->name('farmers.log');
 Route::get('/farmers/dashboard',function(){
     return view('dashboard.farmers.index');
 })->name('farmers.index');

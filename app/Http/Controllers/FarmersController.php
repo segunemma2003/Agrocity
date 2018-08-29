@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use Farmers;
+use App\Farmers;
+use Auth;
 use Session;
 use Illuminate\Http\Request;
 use App\Http\Requests\FarmersRequest;
@@ -50,13 +51,41 @@ class FarmersController extends Controller
     }
     public function store(FarmersRequest $request)
     {
-              $neparefree=$this->get_pictures('nepareferee', $request);
+        // $this->validate($request,[
+        //      "phone"=>"required",
+        //     "gender"=>"required",
+        //     "town"=>"required",
+        //     "state"=>"required",
+        //     "lga"=>"required",
+        //     "town"=>"required",
+        //     "support"=>"required",
+        //     "group"=>"required",
+        //     "land"=>"required",
+        //     "ward"=>"required",
+        //     "crop"=>"required",
+        //     "bank"=>"required",
+        //     "accountno"=>"required",
+        //     "bvn"=>"required",
+        //     "rname"=>"required",
+        //     "rphone"=>"required",
+        //     //uploads
+        //     "raddress"=>"required",
+        //     "nepareferee"=>"mimes:jpg,jpeg,png,gif,png|max:2048",
+        //     "pixreferee"=>"mimes:jpg,jpeg,png,gif,png|max:2048",
+        //     "passport"=>"mimes:jpg,jpeg,png,gif,png|max:2048",
+        //     "certificates"=>"mimes:jpg,jpeg,png,gif,png|max:2048",
+        //     "regcert"=>"mimes:jpg,jpeg,png,gif,png|max:2048",
+        //     "idcard"=>"mimes:jpg,jpeg,png,gif,png|max:2048"
+        // ]);
+        // dd($request->all());
+              $nepareferee=$this->get_pictures('nepareferee', $request);
         $pixreferee=$this->get_pictures('pixreferee', $request);
         $passport=$this->get_pictures('passport', $request);
         $certificates=$this->get_pictures('cerificates', $request);
         $regcert=$this->get_pictures('regcert', $request);
         $idcard=$this->get_pictures('idcard', $request);
         $farmers=new Farmers;
+        $farmers->user_id=Auth::user()->id;
         $farmers->phone=$request->phone;
         $farmers->gender=$request->gender;
         $farmers->town=$request->town;
@@ -71,10 +100,10 @@ class FarmersController extends Controller
         $farmers->accountno=$request->accountno;
         $farmers->bvn=$request->bvn;
         $farmers->rname=$request->rname;
-        $farmers->address=$request->raddress;
+        $farmers->raddress=$request->raddress;
         $farmers->rphone=$request->rphone;
         $farmers->idcard=$idcard;
-        $farmers->regcert=$regcert;
+        // $farmers->regcert=$regcert;
         $farmers->certificates=$certificates;
         $farmers->passport=$passport;
         $farmers->pixreferee=$pixreferee;
