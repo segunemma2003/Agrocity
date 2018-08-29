@@ -16,13 +16,14 @@
      
         <nav class="l-nav" role="navigation">
             <div class="nav-main">
-                <div class="brand-container" onclick="javascript:location.href='/'">
-                    <img src="{{ asset('assets/images/icon.brand--light.png') }}" alt="" class="brand-icon">
-                    <img src="{{ asset('assets/img/icon.brand--text.png') }}" alt="" class="brand-text">
+                <div class="brand-container">
+                    <img src="{{ asset('assets/images/logo.png') }}" class="brand-logo" style="width: 100px;height: 40px">
+                    <!-- <img src="{{ asset('assets/images/logo.png') }}" alt="" class="brand-icon" style="margin-left: 0px">
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="" class="brand-text"> -->
                 </div>
                 <div class="nav-links-container">
                     <div class="nav-link home" data-href="home">Home</div>
-                    <div class="nav-link who-we-are" data-href="who-we-are">Who we are</div>
+                    <div class="nav-link who-we-are"><a href="#who"></a> Who we are</div>
                     <div class="nav-link what-we-do" data-href="what-we-do">What we do</div>
                     <div class="nav-link contact-us" data-href="contact-us">Contact us</div>
                 </div>
@@ -48,12 +49,12 @@
                         <p class="hero-subtitle">
                             Become a farmer.<br>Become a sponsor<br> and support the revitalization of the farming system.
                         </p>
-                        <a href="{{ route('register') }}" class="btn btn-color2 ">GET STARTED</a>
+                        <a href="{{ route('register') }}" class="btn btn-color2 btn-header">GET STARTED</a>
                     </div>
                 </div>
             </div>
         </header>
-        <section class="l-section who-we-are" role="" id="who-we-are">
+        <section class="l-section who-we-are" role="" id="who">
             <img src="{{ asset('assets/images/icon.section-bg.png') }}" class="section-bg">
             <div class="section-content">
                 <img src="{{ asset('assets/images/icon.who-we-are.png') }}" alt="" class="section-icon">
@@ -172,7 +173,7 @@
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <textarea rows="5" cols="30" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                            <textarea rows="5" cols="30" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none;border-color: #fff;color: #fff"></textarea>
                         </div>
                     </div>
                         <div id="success"></div>
