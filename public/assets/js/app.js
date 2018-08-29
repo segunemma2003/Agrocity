@@ -17,7 +17,6 @@ $(document).ready(function(e) {
             element: document.getElementById('home'),
             handler: function () {
                 $('.l-nav .indicator').css("left", 0);
-                $('.l-nav .nav-main .brand-icon').css("margin-left", "-84px")
             }
         });
 

@@ -16,10 +16,9 @@
      
         <nav class="l-nav" role="navigation">
             <div class="nav-main">
-                <div class="brand-container">
-                    <img src="{{ asset('assets/images/logo.png') }}" class="brand-logo" style="width: 100px;height: 40px">
-                    <!-- <img src="{{ asset('assets/images/logo.png') }}" alt="" class="brand-icon" style="margin-left: 0px">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="" class="brand-text"> -->
+                <div class="brand-container" onclick="javascript:location.href='/'">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="" class="brand-icon" style="margin-left: 0px!important">
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="" class="brand-text">
                 </div>
                 <div class="nav-links-container">
                     <div class="nav-link home" data-href="home">Home</div>
