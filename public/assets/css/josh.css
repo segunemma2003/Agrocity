@@ -166,3 +166,35 @@ body {
 .partners-section {
   margin-bottom: 20px;
 }
+
+.nav-link a {
+  color: #fff!important;
+  text-decoration: none;
+}
+
+.reg-page {
+  background-image: url("../images/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 14px!important;
+
+}
+
+.reg-title {
+  color: #ff595f!important;
+  font-size: 28px!important;
+  text-align: center;
+
+}
+
+.reg-card {
+  padding: 20px!important;
+  margin-top: 100px!important;
+  background-color: #black!important;
+  color: #fff;
+}
+
+.reg-header {
+  background-color: #006838!important;
+  color: #fff!important;
+}

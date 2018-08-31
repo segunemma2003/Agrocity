@@ -16,31 +16,29 @@
      
         <nav class="l-nav" role="navigation">
             <div class="nav-main">
-                <div class="brand-container" onclick="javascript:location.href='/'">
-                    <img src="{{ asset('assets/images/logo.png') }}" alt="" class="brand-icon" style="margin-left: 0px!important">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="" class="brand-text">
+                <div class="brand-container">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="" class="brand-icon">
                 </div>
                 <div class="nav-links-container">
                     <div class="nav-link home" data-href="home">Home</div>
-                    <div class="nav-link who-we-are"><a href="#who"></a> Who we are</div>
-                    <div class="nav-link what-we-do" data-href="what-we-do">What we do</div>
-                    <div class="nav-link contact-us" data-href="contact-us">Contact us</div>
+                    <div class="nav-link who-we-are"><a href="#who-we-are">Who we are</a></div>
+                    <div class="nav-link what-we-do"><a href="#what-we-do">What we do</a></div>
+                    <div class="nav-link contact-us"><a href="#contact-us">Contact us</a></div>
+                    <div class="nav-link"><a href="#contact-us">Login</a></div>
+                    <div class="nav-link"><a href="#contact-us">Register</a></div>
                 </div>
             </div>
             <div class="nav-mobile">
-                <div class="nav-link home" data-href="home"></div>
-                <div class="nav-link who-we-are" data-href="who-we-are"></div>
-                <div class="nav-link what-we-do" data-href="what-we-do"></div>
-                <div class="nav-link contact-us" data-href="contact-us"></div>
+                <div class="nav-link home"></div>
+                <div class="nav-link who-we-are"></div>
+                <div class="nav-link what-we-do"></div>
+                <div class="nav-link contact-us"></div>
             </div>
         </nav>
         <header class="l-header" role="header" id="home">
-            <img src="{{ asset('assets/images/header.jpg') }}" alt="Afrivelle" class="header-bg">
+            <img src="{{ asset('assets/images/header.jpg') }}" class="header-bg">
             <div class="header-content">
                 <div class="row">
-                   <!--  <div class="col-xs-12 col-md-4">
-                        <img src="img/icon.brand--light.png" class="header-brand">
-                    </div> -->
                     <div class="col-xs-12 col-md-12">
                         <p class="hero-title">
                             What has been holding you <span>back</span>?
@@ -53,7 +51,7 @@
                 </div>
             </div>
         </header>
-        <section class="l-section who-we-are" role="" id="who">
+        <section class="l-section who-we-are" role="" id="who-we-are">
             <img src="{{ asset('assets/images/icon.section-bg.png') }}" class="section-bg">
             <div class="section-content">
                 <img src="{{ asset('assets/images/icon.who-we-are.png') }}" alt="" class="section-icon">
@@ -157,7 +155,7 @@
                     </ul>
                 </div>
 
-                <div class="col-xs-12 col-sm-6 col-md-6 drop-pad login-pad">
+                <div class="col-xs-12 col-sm-6 col-md-6 drop-pad login-pad" id="contact-us">
                 <h3>Drop Us A Message</h3>
                     <form action="#" method="get" name="sentMessage" id="contactForm" novalidate style="color: #000">
                     <div class="control-group form-group">
@@ -206,7 +204,6 @@
         </div>
     </section>
     <!-- ./Footer -->
-</footer>
 </body>
 <script type="text/javascript" src="{{ asset('assets/js/jquery-3.2.0.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/jquery-migrate-3.0.0.min.js') }}"></script>

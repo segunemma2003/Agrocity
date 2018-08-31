@@ -17,7 +17,7 @@
    Base
    =========================== */
 body {
-  font-family: "Roboto-Regular", Helvetica, Arial;
+  font-family: 'Nunito', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: flex-start;
         width: 50%;
         min-width: 400px;
-        max-width: 500px; } }
+        max-width: 600px; } }
     .l-nav .nav-main .nav-links-container .nav-link {
       width: 25%;
       height: auto;
@@ -180,13 +180,13 @@ h1, h2, h3, h4, h5, h6 {
       .l-nav .nav-mobile .nav-link {
         background-size: 18%; } }
     .l-nav .nav-mobile .nav-link.home {
-      background-image: url("../img/icon.home.png"); }
+      background-image: url("../images/icon.home.png"); }
     .l-nav .nav-mobile .nav-link.who-we-are {
-      background-image: url("../img/icon.who-we-are-2.png"); }
+      background-image: url("../images/icon.who-we-are-2.png"); }
     .l-nav .nav-mobile .nav-link.what-we-do {
-      background-image: url("../img/icon.what-we-do.png"); }
+      background-image: url("../images/icon.what-we-do.png"); }
     .l-nav .nav-mobile .nav-link.contact-us {
-      background-image: url("../img/icon.contact.png"); }
+      background-image: url("../images/icon.contact.png"); }
   .l-nav .nav-mobile .indicator {
     width: 25%;
     height: 2px;
@@ -985,6 +985,48 @@ section .section-title {
 }
 }
 
+.nav-link a {
+  color: #fff!important;
+  text-decoration: none;
+}
+
+.reg-page {
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 14px!important;
 
 }
 
+.reg-title {
+  color: #ff595f!important;
+  font-size: 28px!important;
+  text-align: center;
+
+}
+
+.reg-card {
+  padding: 20px!important;
+  margin-top: 30px!important;
+  background-color: #black!important;
+  color: #fff;
+}
+
+.reg-header {
+  background-color: #006838!important;
+  color: #fff!important;
+}
+
+.reg-input {
+  height: 50px;
+  background-color: #000 transparent!important;
+  border: 0.5px solid #fff !important;
+
+}
+
+.reg-heading {
+  color: yellow;
+  font-size: 2em;
+  margin-top: 50px;
+  text-align: center;
+}

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Agrocity</title>
+    <title>Join Agrocity</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -16,16 +16,17 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styless.css') }}">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style="background-image: url('https://media.giphy.com/media/fteuziV4qzK62ctmLN/giphy.gif'); background-repeat: no-repeat; background-size: cover; font-size:20px !important;">
+<body class="reg-page">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-laravel reg-header">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                   Agrocity
+                <a href="{{ url('/') }}">
+                   <img src="{{ asset('assets/images/logo.png') }}" alt="Agrocity" style="width: 200px" height="45px">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -42,10 +43,10 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" style="color: #fff" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" style="color: #fff;" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -71,7 +72,7 @@
             </div>
         </nav>
 
-        <main class="py-4"  style="opacity:0.7;">
+        <main class="py-4">
             @yield('content')
         </main>
     </div>
