@@ -33,12 +33,12 @@
                   <img src="{{ asset('assets/images/agrocity.jpg')}}" >
                 </div>
            -->
-           @if (session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-           @endif
-                <form id="msform" name="msform" novalidate method="post" enctype="multipart/form-data">
+           <div style="margin:20 auto;">
+                              @foreach($errors->all() as $error)
+            <p  class="text-danger">{{$error}}</p>
+            @endforeach
+            </div>
+                <form id="msform" name="msform" novalidate method="post" action="{{ route('farmers.log') }}" enctype="multipart/form-data">
                     @csrf
                     <!--progress bar-->
                     <ul id="progressbar">
@@ -53,8 +53,10 @@
                     <!-- personal details -->
                     
                     <fieldset>
+
                     <h2 class="fs-title">Personal Details</h2>
                     <h3 class="fs-subtitle">All fields are required</h3>
+    
                     <input type="text" name="fname" id="fname" value="{{$user->name}}" required/> 
                     <!-- <input type="text" name="mname" id="mname" placeholder="Middle Name" />
                     <input type="text" name="lname" placeholder="Last Name" required/> -->
@@ -138,7 +140,7 @@
                         <h2 class="fs-title">Business Profiles</h2>
                         <small id="help" class="form-text text-muted">All fields are required</small>
                         <br></br>
-                        <input  class="required" type="text"name="support" placeholder="Supporting Organization(If any)" value="none" required/>
+                        <input  class="required" type="text" name="support" placeholder="Supporting Organization(If any)" value="none" required/>
                         <input type="text" name="group" placeholder="Farmers Group/COO" required/>
                         <input type="text" name="land" placeholder="Land Size" required/>
                         <input type="text" name="ward" placeholder="Ward/Farmsite Location" required/>
@@ -153,7 +155,7 @@
                         <h2 class="fs-title">Account Details</h2>
                         <h3 class="fs-subtitle">All fields are required</h3>
                         <input type="text" name="bank" placeholder="Name of Bank" required/>
-                        <input type="text" name="accoutno" placeholder="Account Number(Personal)" required/>
+                        <input type="text" name="accountno" placeholder="Account Number(Personal)" required/>
                         <input type="text" name="bvn" placeholder="BVN" required/>
                         <small id="help" class="form-text text-muted">Please ensure the bank details entered are correct</small>
                         <!-- <textarea name="address" placeholder="Address"></textarea> -->
@@ -166,8 +168,8 @@
                             <small id="help" class="form-text text-muted">All fields are required</small>
                             <br></br>
                             <input  class="required" type="text"name="rname" placeholder="Name of Referee" required/>
-                            <input type="text" name="group" placeholder="raddress" required/>
-                            <input type="text" name="land" placeholder="rphone" required/>                               
+                            <input type="text" name="raddress" placeholder="raddress" required/>
+                            <input type="text" name="rphone" placeholder="rphone" required/>                               
                             <div class="row ">
                                 <div class="col-md-5">
                                         <label class="control-label">Upload Nepa Bill of Referee</label>

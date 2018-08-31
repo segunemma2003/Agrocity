@@ -29,6 +29,7 @@ class FarmersRequest extends FormRequest
             "town"=>"required",
             "state"=>"required",
             "lga"=>"required",
+            "town"=>"required",
             "support"=>"required",
             "group"=>"required",
             "land"=>"required",
@@ -38,15 +39,15 @@ class FarmersRequest extends FormRequest
             "accountno"=>"required",
             "bvn"=>"required",
             "rname"=>"required",
-            "raddress"=>"required",
             "rphone"=>"required",
             //uploads
-            "nepareferee"=>"image|max:500",
-            "pixreferee"=>"image|max:500",
-            "passport"=>"image|max:500",
-            "certificates"=>"image|max:500",
-            "regcert"=>"image|max:500",
-            "idcard"=>"image|max:500"
+            "raddress"=>"required",
+            "nepareferee"=>"mimes:jpg,jpeg,png,gif,png|max:2048",
+            "pixreferee"=>"mimes:jpg,jpeg,png,gif,png|max:2048",
+            "passport"=>"mimes:jpg,jpeg,png,gif,png|max:2048",
+            "certificates"=>"mimes:jpg,jpeg,png,gif,png|max:2048",
+            "regcert"=>"mimes:jpg,jpeg,png,gif,png|max:2048",
+            "idcard"=>"mimes:jpg,jpeg,png,gif,png|max:2048"
 
         ];
     }
