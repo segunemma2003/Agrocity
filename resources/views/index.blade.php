@@ -24,8 +24,8 @@
                     <div class="nav-link who-we-are"><a href="#who-we-are">Who we are</a></div>
                     <div class="nav-link what-we-do"><a href="#what-we-do">What we do</a></div>
                     <div class="nav-link contact-us"><a href="#contact-us">Contact us</a></div>
-                    <div class="nav-link"><a href="#contact-us">Login</a></div>
-                    <div class="nav-link"><a href="#contact-us">Register</a></div>
+                    <div class="nav-link"><a href="{{ route('login') }}">Login</a></div>
+                    <div class="nav-link"><a href="{{ route('register') }}">Register</a></div>
                 </div>
             </div>
             <div class="nav-mobile">
