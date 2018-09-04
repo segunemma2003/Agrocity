@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Farmers;
 use Auth;
-use User;
+use App\User;
 use Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
