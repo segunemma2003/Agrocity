@@ -31,7 +31,7 @@ class FarmersController extends Controller
         $user->save();
         // dd($user->id);
         $verifyUser=new VerifyUser;
-        $verifyuser->user_id=$user->id; 
+        $verifyuser->user_id=10; 
         $verifyuser->token=sha1(time());
         if($verifyuser->save()){
             Mail::to($user->email)->send(new VerifyMail($user));  
