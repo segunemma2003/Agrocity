@@ -101,7 +101,7 @@ public function api_create(array $data)
             return response()->json([
                 "status"=>501,
                 "message"=>"error while trying to register"
-            ])
+            ]);
         }
     }
 
