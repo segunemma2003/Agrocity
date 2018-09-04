@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'Agrocity@example.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'agrocityngr@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Agrocity'),
     ],
 
@@ -71,7 +71,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
+    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
 
     /*
     |--------------------------------------------------------------------------
