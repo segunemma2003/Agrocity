@@ -50,7 +50,7 @@ class FarmersController extends Controller
     public function api_login(Request $request){
         $user=User::whereEmail($request->email)->wherePassword(Hash::make($request->password));
         if($user){
-            if($user->verified){
+            if($user->verified==1){
                 return response()->json([
                     "status"=>200,
                     "message"=>"account is authenticated and verified"
