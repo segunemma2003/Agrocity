@@ -48,7 +48,7 @@ class FarmersController extends Controller
         }
     }
     public function api_login(Request $request){
-        $user=User::whereEmail($request->email)->wherePassword(Hash::make($request->password))->first();
+        $user=User::whereEmail($request->email)->wherePassword(Hash::make($request->password))->get();
         dd($user);
         if($user){
             // dd($user->verified);
