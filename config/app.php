@@ -25,6 +25,7 @@ return [
     | services your application utilizes. Set this in your ".env" file.
     |
     */
+
     'env' => env('APP_ENV', 'production'),
 
     /*
@@ -51,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://agrocity.herokuapp.com/'),
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
