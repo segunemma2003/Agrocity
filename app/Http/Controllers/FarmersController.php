@@ -47,6 +47,31 @@ class FarmersController extends Controller
             ]);
         }
     }
+    public function api_login(Request $request){
+        $user=User::whereEmail($request->email)->wherePassword(Hash::make($request->password));
+        if($user){
+            if($user->verified){
+                return response()->json([
+                    "status"=>200,
+                    "message"=>"account is authenticated and verified"
+                ]);    
+            }
+            else if(!$user->verified){
+                return response()->json([
+                    "status"=>301,
+                    "message"=>"account is authenticated but not verified"
+                ]);
+            }
+
+            
+        }
+        else{
+            return response()->json([
+                    "status"=>500,
+                    "message"=>"There is no account for this user"
+                ]);
+        }
+    }
 
     /**
      * Show the form for creating a new resource.
