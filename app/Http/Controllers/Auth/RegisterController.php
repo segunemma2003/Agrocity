@@ -78,32 +78,7 @@ class RegisterController extends Controller
         Mail::to($user->email)->send(new VerifyMail($user));
         return $user;
     }
-public function api_create(array $data)
-    {
-        $user=User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
-        $verifyUser=VerifyUser::create([
-            'user_id'=>$user->id,
-            'token'=>sha1(time()) 
-        ]);
-        Mail::to($user->email)->send(new VerifyMail($user));
-        if($user){
-        return response()->json([
-            "status"=>200,
-            "message"=>"you have successfully registered, visit your mail for verification"
 
-            ]);
-        }
-        else{
-            return response()->json([
-                "status"=>501,
-                "message"=>"error while trying to register"
-            ]);
-        }
-    }
 
 
 

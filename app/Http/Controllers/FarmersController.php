@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 use App\Farmers;
 use Auth;
+use User;
 use Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\VerifyMail;
+use App\VerifyUser;
 use App\Http\Requests\FarmersRequest;
 class FarmersController extends Controller
 {
@@ -16,6 +21,30 @@ class FarmersController extends Controller
     public function index()
     {
         //
+    }
+    public function api_create(Request $request )
+    {
+        $user=new User;
+        $user->name=$request->name;
+        $user->email=$request->email;
+        $user->password=Hash::make($request->password);
+        $user->save();
+        $verifyUser=new VerifyUser;
+        $verifyuser->user_id=>$user->id; 
+        $verifyuser->token=>sha1(time());
+        if($verifyuser->save()){
+            Mail::to($user->email)->send(new VerifyMail($user));  
+            return response()->json([
+            "status"=>200,
+            "message"=>"you have successfully registered, visit your mail for verification"
+
+            ]);  
+        }else{
+            return response()->json([
+                "status"=>501,
+                "message"=>"error while trying to register"
+            ]);
+        }
     }
 
     /**
