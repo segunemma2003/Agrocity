@@ -49,7 +49,7 @@ class FarmersController extends Controller
     }
     public function api_login(Request $request){
         $user=User::whereEmail($request->email)->wherePassword(Hash::make($request->password))->first();
-        dd($request->all());
+        dd($user);
         if($user){
             // dd($user->verified);
             if($user->verified){
@@ -58,7 +58,7 @@ class FarmersController extends Controller
                     "message"=>"account is authenticated and verified"
                 ]);    
             }
-            else if(!$user->verified){
+            else{
                 return response()->json([
                     "status"=>301,
                     "message"=>"account is authenticated but not verified"
