@@ -30,8 +30,8 @@ class FarmersController extends Controller
         $user->password=Hash::make($request->password);
         $user->save();
         $verifyUser=new VerifyUser;
-        $verifyuser->user_id=>$user->id; 
-        $verifyuser->token=>sha1(time());
+        $verifyuser->user_id=$user->id; 
+        $verifyuser->token=sha1(time());
         if($verifyuser->save()){
             Mail::to($user->email)->send(new VerifyMail($user));  
             return response()->json([
