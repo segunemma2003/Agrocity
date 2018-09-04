@@ -29,7 +29,7 @@ class FarmersController extends Controller
         $user->email=$request->email;
         $user->password=Hash::make($request->password);
         $user->save();
-        dd($user);
+        dd($user->id);
         $verifyUser=new VerifyUser;
         $verifyuser->user_id=$user->id; 
         $verifyuser->token=sha1(time());
