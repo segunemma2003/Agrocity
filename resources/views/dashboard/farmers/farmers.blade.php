@@ -1,17 +1,16 @@
 @extends('layouts.dashboard.master')
 @section('content')
-
-    <div class="content-wrapper">
+<div class="content-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="page-head-line">my farms</h4>
+                    <h4 class="page-head-line">my inestors/sponsors</h4>
                 </div>
 
             </div>
             <div class="row">
-                <div class="col-md-12">
-                <!--     <div class="alert alert-success">
+               <!--  <div class="col-md-12">
+                    <div class="alert alert-success">
                         <p>Welcome Mr Bamidele Segun</p>
                     </div>
                 </div> -->
@@ -21,7 +20,7 @@
                      <!--    Hover Rows  -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Number of farms alloted to you.
+                            My sponsors and investors
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -29,59 +28,48 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Farm size</th>
+                                            <th>Name</th>
                                             <th>Location</th>
-                                            <th>Duration</th>
-                                            <th>Inspector</th>
+                                            <th>Amount</th>
                                             <th>status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>I hectare</td>
-                                            <td>Azumiri</td>
-                                            <td>6 months</td>
-                                            <td>Mr Segun Bamidele</td>
-                                            <td>Active</td>
+                                            <td>Daniel Chinagozi</td>
+                                            <td>Lagos</td>
+                                            <td>N 90, 000</td>
+                                            <td>Current</td>
                                         </tr>
                                         <tr>
-                                            <td>2</td>
-                                            <td>I hectare</td>
-                                            <td>Azumiri</td>
-                                            <td>1 year</td>
-                                            <td>Mr Segun Amara</td>
-                                            <td>Active</td>
+                                            <td>1</td>
+                                            <td>Daniel Chinagozi</td>
+                                            <td>Lagos</td>
+                                            <td>N 90, 000</td>
+                                            <td>Current</td>
                                         </tr>
                                         <tr>
-                                            <td>3</td>
-                                            <td>I hectare</td>
-                                            <td>Azumiri</td>
-                                            <td>3 months</td>
-                                            <td>Mr Segun Amara</td>
-                                            <td>Active</td>
+                                            <td>1</td>
+                                            <td>Daniel Chinagozi</td>
+                                            <td>Lagos</td>
+                                            <td>N 90, 000</td>
+                                            <td>Current</td>
                                         </tr>
                                         <tr>
-                                            <td>4</td>
-                                            <td>I hectare</td>
-                                            <td>Azumiri</td>
-                                            <td>2 years</td>
-                                            <td>Mr Segun Amara</td>
-                                            <td>Active</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>I hectare</td>
-                                            <td>Azumiri</td>
-                                            <td>1 year</td>
-                                            <td>Mr Segun Amara</td>
-                                            <td>Active</td>
+                                            <td>1</td>
+                                            <td>Daniel Chinagozi</td>
+                                            <td>Lagos</td>
+                                            <td>N 90, 000</td>
+                                            <td>Current</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
         </div>
-    </div>
+</div>
 @endsection
