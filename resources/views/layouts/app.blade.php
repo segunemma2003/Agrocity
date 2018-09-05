@@ -21,16 +21,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
-     <script src="{{ asset('js/toastr.js') }}"></script>
-<script>
-@if(Session::has('success'))
-  toastr.success("{{Session::get('success')}}");
-@elseif(Session::has('info'))
-  toastr.info("{{Session::get('info')}}");
-@elseif(Session::has('errors'))
-  toastr.info("{{Session::get('error')}}");
-@endif
-</script>
+    
 </head>
 <body class="reg-page">
     <div id="app">
@@ -87,5 +78,15 @@
             @yield('content')
         </main>
     </div>
+     <script src="{{ asset('js/toastr.js') }}"></script>
+<script>
+@if(Session::has('success'))
+  toastr.success("{{Session::get('success')}}");
+@elseif(Session::has('info'))
+  toastr.info("{{Session::get('info')}}");
+@elseif(Session::has('errors'))
+  toastr.info("{{Session::get('error')}}");
+@endif
+</script>
 </body>
 </html>
