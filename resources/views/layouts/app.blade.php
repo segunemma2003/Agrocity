@@ -78,6 +78,7 @@
             @yield('content')
         </main>
     </div>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery-3.2.0.min.js') }}"></script>
      <script src="{{ asset('js/toastr.js') }}"></script>
 <script>
 @if(Session::has('success'))
