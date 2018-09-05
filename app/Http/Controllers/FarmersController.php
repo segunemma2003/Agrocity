@@ -60,9 +60,10 @@ class FarmersController extends Controller
        ];
        $user=Auth::attempt($checks,$request->remember);
         // dd(Hash::make($request->password));
+       $users=Auth::user();
          if($user){
             // dd($user->verified);
-            if($user->verified){
+            if($users->verified){
                 return response()->json([
                     "status"=>200,
                     "message"=>"account is authenticated and verified"
