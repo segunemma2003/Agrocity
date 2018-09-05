@@ -267,8 +267,8 @@
   toastr.success("{{Session::get('success')}}");
 @elseif(Session::has('info'))
   toastr.info("{{Session::get('info')}}");
-@elseif(Session::has('admitted'))
-  toastr.info("{{Session::get('admitted')}}");
+@elseif(Session::has('errors'))
+  toastr.error("{{Session::get('errors')}}");
 @endif
 </script>
         </body>

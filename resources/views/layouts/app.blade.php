@@ -86,7 +86,7 @@
 @elseif(Session::has('info'))
   toastr.info("{{Session::get('info')}}");
 @elseif(Session::has('errors'))
-  toastr.error("{{Session::get('errors')['email']}}");
+  toastr.error("{{Session::get('errors')}}");
 @endif
 </script>
 </body>
