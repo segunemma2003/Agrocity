@@ -246,6 +246,7 @@
                         </fieldset>
                 </form>
             </div>
+            <script type="text/javascript" src="{{ asset('assets/js/jquery-3.2.0.min.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <!-- jQuery -->
         <!-- <script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="text/javascript"></script> -->
