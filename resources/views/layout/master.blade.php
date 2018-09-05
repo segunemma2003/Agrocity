@@ -15,12 +15,23 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/amara.css') }}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/josh.css') }}">
-
+         <link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
 </head>
 <body>
   
     @include('layout.nav')
     @yield('content')
     @include('layout.footer')
+
+    <script src="{{ asset('js/toastr.js') }}"></script>
+<script>
+@if(Session::has('success'))
+  toastr.success("{{Session::get('success')}}");
+@elseif(Session::has('info'))
+  toastr.info("{{Session::get('info')}}");
+@elseif(Session::has('error'))
+  toastr.info("{{Session::get('error')}}");
+@endif
+</script>
 </body>
 </html>

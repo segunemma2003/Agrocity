@@ -20,6 +20,17 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
+     <script src="{{ asset('js/toastr.js') }}"></script>
+<script>
+@if(Session::has('success'))
+  toastr.success("{{Session::get('success')}}");
+@elseif(Session::has('info'))
+  toastr.info("{{Session::get('info')}}");
+@elseif(Session::has('admitted'))
+  toastr.info("{{Session::get('admitted')}}");
+@endif
+</script>
 </head>
 <body class="reg-page">
     <div id="app">

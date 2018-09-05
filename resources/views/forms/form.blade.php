@@ -19,6 +19,7 @@
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/form.css') }}">
       <link rel="stylesheet" type="text/css" href="{{asset('assets/css/josh.css') }}">
+       <link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
         </head>
         <body>
           <!--   <script>
@@ -259,6 +260,16 @@
             <!-- <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
             <!-- <script src='http://cdnjs.cloudfare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script> -->
             <script src="{{ asset('assets/js/form.js') }}"></script>
+            <script src="{{ asset('js/toastr.js') }}"></script>
+<script>
+@if(Session::has('success'))
+  toastr.success("{{Session::get('success')}}");
+@elseif(Session::has('info'))
+  toastr.info("{{Session::get('info')}}");
+@elseif(Session::has('admitted'))
+  toastr.info("{{Session::get('admitted')}}");
+@endif
+</script>
         </body>
         </html>
     
