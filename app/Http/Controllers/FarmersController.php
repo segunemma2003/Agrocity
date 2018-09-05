@@ -58,7 +58,7 @@ class FarmersController extends Controller
              'password' => $request->password,
              
        ];
-       $user=Auth::guard('auth')->attempt($checks,$request->remember);
+       $user=Auth::attempt($checks,$request->remember);
         // dd(Hash::make($request->password));
          if($user){
             // dd($user->verified);
