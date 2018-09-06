@@ -24,6 +24,14 @@ class FarmersController extends Controller
     }
     public function api_create(Request $request )
     {
+
+        $em=User::whereEmail($request->email)->first();
+        if($em){
+            return response()->json([
+                "status"=>500,
+                "message"=>"email is already taken"
+            ]);
+        }else{
         $user=new User;
         $user->name=$request->name;
         $user->email=$request->email;
@@ -45,6 +53,7 @@ class FarmersController extends Controller
                 "status"=>501,
                 "message"=>"error while trying to register"
             ]);
+            }
         }
     }
     public function api_login(Request $request){
