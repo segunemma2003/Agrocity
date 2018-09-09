@@ -29,7 +29,7 @@
     text-align:center;
     opacity:0.8;
     position:relative;
-    background-color:red;
+    background-color:white;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -39,12 +39,12 @@
         text-align:center;
         opacity:0.8;
         position:relative;
-        background-color:red;
+        background-color:white;
     }
 }
 
 #msform fieldset{
-    background:green;
+    background:white;
     border:0 none;
     border-radius:3px;
     box-shadow: 0 15px 1px rgba(0,0,0,0.4 );
