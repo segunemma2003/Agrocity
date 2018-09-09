@@ -2,7 +2,11 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
-* {margin: 0; padding: 0; font-size:20px;}
+* {margin: 0; 
+    padding: 0; 
+    font-size:20px;
+    box-sizing:border-box;
+}
 
 /* origina */
 
@@ -20,28 +24,40 @@
     float: right;
 }
 #msform{
-    width:800px;
-    margin:50px auto;
+    width:60%;
+    margin:0 auto;
     text-align:center;
     opacity:0.8;
     position:relative;
-    /*background-color:red;*/
-    /*height:500px;*/
-    /*z-index:-2;*/
-
+    background-color:red;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #msform{
+        width:80%;
+        margin:0 auto;
+        text-align:center;
+        opacity:0.8;
+        position:relative;
+        background-color:red;
+    }
+}
+
 #msform fieldset{
-    background:white;
+    background:green;
     border:0 none;
     border-radius:3px;
-    box-shadow:0 0 15px 1px rgba(0,0,0,0.4 );
-    padding:20px 30px;
+    box-shadow: 0 15px 1px rgba(0,0,0,0.4 );
+    padding:10px 20px;
     box-sizing:border-box;
-    width:80%;
-    margin:0 10%;
+    width:100%;
+    margin:0 auto;
     /* stacking fieldsets above each other*/
     position:absolute;
 }
+
+
+
 #msform fieldset:not(:first-of-type){
     display:none;
 }
@@ -51,7 +67,6 @@
     border-radius:none!important;
     margin-bottom:10px;
     width:100%;
-    
     box-sizing:border-box;
     font-family:montserrat;
     color:#2c3e50;
@@ -69,16 +84,28 @@ label {
     font-family:montserrat;
     color:#2c3e50;
     font-size:13px;
+    /* background-color:blue; */
 }
 /* hide all except the first fieldset */
 /* #msform fieldset:not(:first-of-type){
     display:none;
 } */
-.in{
+.radiolabel{
     margin-left:20px;
+    display:inline-block;
 }
+
+.newmargin{
+    margin-left:-50px;
+}
+ /* for phones */
+ @media (min-width: 320px) and (max-width: 480px) {
+    .newmargin{
+        margin-left:0px;
+    } 
+ }
 /* inputs */
-#msform input, msform textarea{
+#msform input, msform textarea msform select{
     padding:15px;
     border:1px solid #ccc;
     border-radius:3px;

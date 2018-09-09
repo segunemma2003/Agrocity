@@ -1,135 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Form</title>
-	<meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
-      <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
-      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />  
-      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-        <!-- <script src="jquery/jquery-3.2.1.js"></script> -->
-        <!-- <script src="{{ asset('js/app.js') }}"></script> -->
-        <script src="{{asset('assets/js/jquery-3.2.1.js') }}"></script>
-        <script src="{{ asset('assets/js/lga.js') }}"></script>
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
-       <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/form.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{asset('assets/css/josh.css') }}">
-       <link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
-        </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Form</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />  
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<!-- <script src="jquery/jquery-3.2.1.js"></script> -->
+<!-- <script src="{{ asset('js/app.js') }}"></script> -->
+<script src="{{asset('assets/js/jquery-3.2.1.js') }}"></script>
+<script src="{{ asset('assets/js/lga.js') }}"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/form.css') }}">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/josh.css') }}">
+<link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
+</head>
         <body>
-          <!--   <script>
-                $(document).ready(function(){
-                    alert("hi");
-                });
-                </script>
-             -->
-            
-                <!--multistep form-->
-                <!-- <div class="img-d">
-                  <img src="{{ asset('assets/images/agrocity.jpg')}}" >
+                <div style="margin:20 auto;">
+                        @foreach($errors->all() as $error)
+                <p  class="text-danger">{{$error}}</p>
+                @endforeach
                 </div>
-           -->
-           <div style="margin:20 auto;">
-                              @foreach($errors->all() as $error)
-            <p  class="text-danger">{{$error}}</p>
-            @endforeach
-            </div>
                 <form id="msform" name="msform" novalidate method="post" action="{{ route('farmers.log') }}" enctype="multipart/form-data">
                     @csrf
-                    <!--progress bar-->
-                    <ul id="progressbar">
-                        <li class="active">Personal Details</li>
+                <!--progress bar-->
+                <ul id="progressbar">
+                       <li class="active">Personal Details</li>
                         <li>Social Profiles</li>
                         <li>Account Details</li>
                         <li>Details of Referee</li>
                         <li>Uploads</li>
                                 
-                    </ul>
-                    <!--fieldsets-->
-                    <!-- personal details -->
+                </ul>
+                <!--fieldsets-->
+                <!-- personal details -->
                     
-                    <fieldset>
-
-                    <h2 class="fs-title">Personal Details</h2>
-                    <h3 class="fs-subtitle">All fields are required</h3>
-    
-                    <input type="text" name="fname" id="fname" value="{{$user->name}}" required/> 
-                    <!-- <input type="text" name="mname" id="mname" placeholder="Middle Name" />
-                    <input type="text" name="lname" placeholder="Last Name" required/> -->
-                    <input type="text" name="phone" placeholder="Phone" required/>
-                    <div class="row">
-                        <div class="co-md-4">
-                                <label class="control-label in">Gender</label>
-                        </div>
-                        <div class="col-md-8">
-                                <label class="">Male</label>
-                                <input class="radio" type="radio" name="gender" value="male" checked />
-                                
-                                <label class=""> Female</label>
-                                <input type="radio" name="gender" value="female" class="radio" />
-                                
-                        </div>
-                    </div>
-                    
+                <fieldset>
+                        <h2 class="fs-title">Personal Details</h2>
+                        <h3 class="fs-subtitle">All fields are required</h3>
+                                <div class="form-group row">
+                                        <div>
+                                        <div class="col-xs-12 col-sm-2 ">        
+                                                <label class="" >Name</label>
+                                        </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-offset-3 col-sm-9   ">                
+                                                <input type="text" class="form-control" name="fname" id="fname" value="{{$user->name}}" required/>        
+                                        </div>
+                                </div>
                    
-                    <div class="form-group" style="display:flex;">
-                        <label class="control-label">State of Origin</label>
-                   <select name="state" id="state" class="form-control">
-                          <option value="" selected="selected" >- Select -</option>
-                          <option value='Abia'>Abia</option>
-                          <option value='Adamawa'>Adamawa</option>
-                          <option value='AkwaIbom'>AkwaIbom</option>
-                          <option value='Anambra'>Anambra</option>
-                          <option value='Bauchi'>Bauchi</option>
-                          <option value='Bayelsa'>Bayelsa</option>
-                          <option value='Benue'>Benue</option>
-                          <option value='Borno'>Borno</option>
-                          <option value='Cross River'>Cross River</option>
-                          <option value='Delta'>Delta</option>
-                          <option value='Ebonyi'>Ebonyi</option>
-                          <option value='Edo'>Edo</option>
-                          <option value='Ekiti'>Ekiti</option>
-                          <option value='Enugu'>Enugu</option>
-                          <option value='FCT'>FCT</option>
-                          <option value='Gombe'>Gombe</option>
-                          <option value='Imo'>Imo</option>
-                          <option value='Jigawa'>Jigawa</option>
-                          <option value='Kaduna'>Kaduna</option>
-                          <option value='Kano'>Kano</option>
-                          <option value='Katsina'>Katsina</option>
-                          <option value='Kebbi'>Kebbi</option>
-                          <option value='Kogi'>Kogi</option>
-                          <option value='Kwara'>Kwara</option>
-                          <option value='Lagos'>Lagos</option>
-                          <option value='Nasarawa'>Nasarawa</option>
-                          <option value='Niger'>Niger</option>
-                          <option value='Ogun'>Ogun</option>
-                          <option value='Ondo'>Ondo</option>
-                          <option value='Osun'>Osun</option>
-                          <option value='Oyo'>Oyo</option>
-                          <option value='Plateau'>Plateau</option>
-                          <option value='Rivers'>Rivers</option>
-                          <option value='Sokoto'>Sokoto</option>
-                          <option value='Taraba'>Taraba</option>
-                          <option value='Yobe'>Yobe</option>
-                          <option value='Zamfara'>Zamafara</option>
-                        </select>
-                </div>
+                                <div class="form-group row">
+                                        <div>
+                                        <div class="col-xs-12 col-sm-2 "> 
+                                                <label class="">Phone</label>
+                                        </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-offset-3 col-sm-9"> 
+                                                <input type="text" name="phone" class="form-control" placeholder="Phone" required/>
+                                        </div>
+                                </div>
+                                <div class="form-group row">
+                                        <div>
+                                                <div class="col-xs-12 col-sm-2">
+                                                     <label>Gender</label>
+                                                </div>
+                                        </div>
+                                
+                                        <div class="col-xs-12 col-sm-2"> 
+                        
+                                                <label class="control-label">Male</label>
+                                                <input class="radio" type="radio" name="gender" value="male" checked />
+
+                                                <label class="control-label"> Female</label>
+                                                <input type="radio" name="gender" value="female" class="radio" />
+                                
+                                      </div>
+                                </div>
+                    
+                                <div class="form-group row">
+                                        <div>        
+                                                <div class="col-xs-12 col-sm-2">
+                                                        <label class="control-label">State of Origin</label>
+                                                </div>
+                                        </div>
+                                        <div class="col-sm-offset-3 col-sm-9 newmargin">
+                                        <select name="state" id="state" class="form-control"  >
+                                                <option value="" selected="selected">- Select -</option>
+                                                <option value='Abia'>Abia</option>
+                                                <option value='Adamawa'>Adamawa</option>
+                                                <option value='AkwaIbom'>AkwaIbom</option>
+                                                <option value='Anambra'>Anambra</option>
+                                                <option value='Bauchi'>Bauchi</option>
+                                                <option value='Bayelsa'>Bayelsa</option>
+                                                <option value='Benue'>Benue</option>
+                                                <option value='Borno'>Borno</option>
+                                                <option value='Cross River'>Cross River</option>
+                                                <option value='Delta'>Delta</option>
+                                                <option value='Ebonyi'>Ebonyi</option>
+                                                <option value='Edo'>Edo</option>
+                                                <option value='Ekiti'>Ekiti</option>
+                                                <option value='Enugu'>Enugu</option>
+                                                <option value='FCT'>FCT</option>
+                                                <option value='Gombe'>Gombe</option>
+                                                <option value='Imo'>Imo</option>
+                                                <option value='Jigawa'>Jigawa</option>
+                                                <option value='Kaduna'>Kaduna</option>
+                                                <option value='Kano'>Kano</option>
+                                                <option value='Katsina'>Katsina</option>
+                                                <option value='Kebbi'>Kebbi</option>
+                                                <option value='Kogi'>Kogi</option>
+                                                <option value='Kwara'>Kwara</option>
+                                                <option value='Lagos'>Lagos</option>
+                                                <option value='Nasarawa'>Nasarawa</option>
+                                                <option value='Niger'>Niger</option>
+                                                <option value='Ogun'>Ogun</option>
+                                                <option value='Ondo'>Ondo</option>
+                                                <option value='Osun'>Osun</option>
+                                                <option value='Oyo'>Oyo</option>
+                                                <option value='Plateau'>Plateau</option>
+                                                <option value='Rivers'>Rivers</option>
+                                                <option value='Sokoto'>Sokoto</option>
+                                                <option value='Taraba'>Taraba</option>
+                                                <option value='Yobe'>Yobe</option>
+                                                <option value='Zamfara'>Zamafara</option>
+                                                </select>
+                                        </div>
+                                </div>
                   
-                <div class="form-group" style="display:flex;">
-                          <label class="control-label">LGA of Origin</label>
-                          <select name="lga" id="lga" class="form-control" required>
-                          </select>
-                </div>
+                                <div class="form-group row">
+                                        <div>
+                                                <div class="col-xs-12 col-sm-2">
+                                                        <label class="">LGA of Origin</label>
+                                                </div>
+                                        </div>
+                                                <div  class="col-sm-offset-3 col-sm-9 newmargin">
+                                                        <select name="lga" id="lga" class="form-control" required>
+                                                        </select>
+                                                </div>
+                                </div>
  
                        
-                       
-                    <input type="text" name="town" placeholder="Town" required/>
+                                <div class="form-group row">
+                                        <div>
+                                                <div class="col-xs-12 col-sm-2">
+                                                        <label class="">Town</label>
+                                                 </div>
+                                        </div>
+                                        <div class="col-sm-offset-3 col-sm-9">  
+                                                <input type="text" name="town" placeholder="Town" required/>
+                                        </div>
+                                </div>
                     <small id="help" class="form-text text-muted">Please ensure the informations provided are correct</small>
                     <!-- <input type="text" name="email" placeholder="email"/>
                     <input type="password" name="pass" placeholder="password"/>
@@ -141,6 +167,7 @@
                         <h2 class="fs-title">Business Profiles</h2>
                         <small id="help" class="form-text text-muted">All fields are required</small>
                         <br></br>
+                     
                         <input  class="required" type="text" name="support" placeholder="Supporting Organization(If any)" value="none" required/>
                         <input type="text" name="group" placeholder="Farmers Group/COO" required/>
                         <input type="text" name="land" placeholder="Land Size" required/>

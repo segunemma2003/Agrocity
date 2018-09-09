@@ -21,6 +21,38 @@ body{
     animation-duration: 2s;
     animation-name: slidein;
 }
+
+/* for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .jumbotron {
+        text-align: center;
+        padding-top: 4rem;
+        /* padding-right: 7rem; */
+        margin:0 auto;
+        padding-bottom: 10rem;
+        height:450px;
+        width:70%;
+        opacity:0.8;
+        animation-duration: 2s;
+        animation-name: slidein;
+    }
+    }
+
+    /* for phones */
+    @media (min-width: 320px) and (max-width: 480px) {
+    .jumbotron {
+        text-align: center;
+        padding-top: 4rem;
+        /* padding-bottom: 5rem; */
+        margin:0 auto;
+        padding-bottom: 10rem;
+        height:450px;
+        width:80%;
+        opacity:0.8;
+        animation-duration: 2s;
+        animation-name: slidein;
+    }
+    }
 @keyframes slidein {
     from {
       margin-left: 100%;
@@ -36,18 +68,33 @@ body{
 .img-responsive {
     margin: 0 auto;
     height:160px;
-    width:160px;
+    width:36%;
 }
-.image{
+
+/* for tabs  */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .img-responsive {
+        margin: 0 auto;
+        height:160px;
+        width:40%;
+    }
+}
+/* for phones */
+@media (min-width: 320px) and (max-width: 480px) {
+    .img-responsive {
+        margin: 0 auto;
+        height:160px;
+        width:100%;
+    }
+}
+
+/* .image{
     background:green;
     /* margin-top:; */
-    width:50%;
-    height:220px;
-    margin:0 auto;  
-}
+   
 .btn{
     padding:15px;
-   
+    margin-top:5px;
     background-color:green;
     border: green;
     opacity:100%;
@@ -63,15 +110,23 @@ body{
     padding:0px 15px 0px 10px;
 }
  .r{
-     margin-top:20px;
+     margin-top:60px;
  }
- .btnsize{
-     margin-top:15px;
+ /* .btnsize{
+     
      margin-right:0px;
      float:center;
 
 
- }
+ } */
+ .flex-container {
+    display: flex;
+    height: 200px;
+    width:100%;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: red;
+  }
 .w{
     margin-right:10px;
 }
