@@ -63,23 +63,24 @@
                         </div>
                     </div>
                     <!-- <br></br> -->
-                            <div class="row r">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-4 btnsize ">
+                            <div class="row r ">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-5">
                                   <form method="post">
                                         @csrf
                                         <input type="hidden" name="user_type" value="farmer">
                                     <button class="btn btn-primary" href="#" role="button">Continue as Farmer</button>
                                   </form>
                                 </div>
-                                <div class="extra"></div>
-                                    <div class="col-md-4 btnsize "  >
+                                <!-- <div class="extra"></div> -->
+                                    <div class="col-md-5"  >
                                       <form method="post">
                                         @csrf
                                         <input type="hidden" name="user_type" value="investor">
                                         <button class="btn btn-primary" href="#" role="button">Continue as Investor</button>
                                       </form>
                                     </div>
+                                    <div class="col-md-1"></div>
                                    
                             </div>
                 </div>
