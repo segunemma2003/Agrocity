@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="page-head-line">Farmer's dashboard</h4>
+                    <h4 class="page-head-line">Admin's dashboard</h4>
                 </div>
 
             </div>
