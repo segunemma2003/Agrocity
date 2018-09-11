@@ -5,6 +5,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <h4 class="page-head-line">Farmer's dashboard</h4>
+                    <div>
+                        <a href="{{ route('farm.request') }}" class="btn btn-lg btn-success">Request for farm</a>
+                    </div>
                 </div>
 
             </div>
@@ -12,6 +15,7 @@
                 <div class="col-md-12">
                     <div class="alert alert-success">
                         <p>Welcome {{Auth::user()->name}}</p>
+
                     </div>
                 </div>
 

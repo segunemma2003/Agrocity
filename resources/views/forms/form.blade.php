@@ -23,9 +23,9 @@
 </head>
         <body>
                 <div style="margin:20 auto;">
-                        @foreach($errors->all() as $error)
+<!--                         @foreach($errors->all() as $error)
                 <p  class="text-danger">{{$error}}</p>
-                @endforeach
+                @endforeach -->
                 </div>
                 <div class="text-center">
                         <img src="{{ asset('assets/images/agrocity.jpg')}}" class="rounded" alt="logo" style="margin-top:3%; width:10%; height:10%;">
@@ -57,14 +57,14 @@
                         <div class="form-group row">
                                 <label for="name" class="col-sm-2 col-form-label">Name</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                            <input type="text" class="form-control" id="name" placeholder="Name" name="name" value="{{Auth::user()->name}}" readonly>
                                         </div>
                         </div>
                    
                                 <div class="form-group row">
                                         <label for="name" class="col-sm-2 col-form-label">Phone</label>
                                                 <div class="col-sm-9">
-                                                        <input type="text" class="form-control" id="phone" placeholder=Phone required>
+                                                        <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone" required>
                                                 </div>
                                 </div>
                                         
@@ -130,14 +130,14 @@
                                 <div class="form-group row">
                                         <label for="lga" class="col-sm-2 col-form-label">LGA</label>
                                                 <div class="col-sm-9">
-                                                <select id="lga" class="form-control" required> </select>
+                                                <select id="lga" class="form-control" name="lga" required> </select>
                                                 </div>
                                 </div>
                        
                                 <div class="form-group row">
                                         <label for="town" class="col-sm-2 col-form-label">Town</label>
                                                 <div class="col-sm-9">
-                                                        <input type="text" class="form-control" id="town" placeholder=Town required>
+                                                        <input type="text" class="form-control" id="town" name="town" placeholder=Town required>
                                                 </div>
                                 </div>
 <!-- <div class="text-center"> -->
