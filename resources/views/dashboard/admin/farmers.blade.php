@@ -1,4 +1,4 @@
-@extends('layouts.dashboard.master')
+@extends('layouts.admin.masters')
 @section('content')
 <div class="content-wrapper">
         <div class="container">
@@ -20,54 +20,63 @@
                      <!--    Hover Rows  -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            My sponsors and investors
+                            All Farmers
                         </div>
                         <div class="panel-body">
+                            @if($users->isEmpty())
+                                    
+                                        <div class="alert alert-danger">
+                                        There are no request yet 
+                                        </div>
+                                    
+                                    @else
+                                    @foreach($users as $user)
+                                    @if(!isset($user->farmer))
+                                    <div class="alert alert-danger">
+                                        There are no request yet 
+                                        </div>
+                                    @endif
+                                    @endforeach
+                            @endif
+                            @if($users->isEmpty())
+                            <div></div>
+                            @else
                             <div class="table-responsive">
                                 <table class="farmers-table table table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th><a href="#">Name</a></th>
+                                            <th>No</th>
+                                            <th>Name</th>
                                             <th>Farm Produce</th>
                                             <th>Date of Application</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    
+                                    @foreach($users as $user)
+                                    @if(!isset($user->farmer))
+                                    <tr>
+                                        <th></th>
+                                    </tr>
+                                    @else
                                         <tr>
-                                            <td>1</td>
-                                            <td>Daniel Chinagozi</td>
-                                            <td>Cattle</td>
-                                            <td>Male</td>
+                                            <td>{{$loop->index+1}}</td>
+                                            <td><a href="{{ route('farmer.name',$user->id)}}">{{$user->name}}</a></td>
+                                            <td></td>
+                                            <td>{{$user->farmer->gender?$user->farmer->gender:"No application yet"}}</td>
                                             <td>Pending <i class=" fa status"></i></td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Ezinne Uzoije</td>
-                                            <td>Lagos</td>
-                                            <td>Female</td>
-                                            <td>Make admin</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Josh Onwughalu</td>
-                                            <td>Lagos</td>
-                                            <td>N 90, 000</td>
-                                            <td>Current</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Daniel Chinagozi</td>
-                                            <td>Lagos</td>
-                                            <td>N 90, 000</td>
-                                            <td>Current</td>
-                                        </tr>
-                                    </tbody>
+
+                                    @endif
+                                    @endforeach
+                                    {{$users->links()}}
+                                    @endif
+                                     </tbody>
                                 </table>
+
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

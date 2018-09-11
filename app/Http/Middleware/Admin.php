@@ -19,17 +19,18 @@ class Admin
             return redirect('/login');
         }else{
         $user=Auth::user();
-        if($user->admin =="1" ||$user->id =="1")
+        if($user->isAdmin ==1 || $user->id ==1)
         {
             return $next($request);
-        } 
-        else if($user->user_type=="farmer") 
+        }else{ 
+            if($user->user_type=="farmer") 
             {
                 return redirect('farmers.index');
             }
         else if($user->user_type=="investor"){
-            return redirect('investors.index')
+            return redirect('investors.index');
         }
+    }
     }
     }
 }

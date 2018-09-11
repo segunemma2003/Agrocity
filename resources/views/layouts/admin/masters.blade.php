@@ -20,8 +20,8 @@
     
 </head>
 <body style="font-size:13px !important;">
-    @include('layouts.dashboard.navbar')
-    @include('layouts.dashboard.nav2')
+    @include('layouts.admin.navbar')
+    @include('layouts.admin.nav2')
     <!-- LOGO HEADER END-->
     <!-- MENU SECTION END-->
     @yield('content')

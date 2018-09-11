@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Session;
 use Illuminate\Http\Request;
 use  App\User;
 class AdminController extends Controller
@@ -11,14 +11,31 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(){
+        $users=User::all();
+        $investors=User::whereUser_type('investor')->get();
+        $farmers=User::whereUser_type('farmer')->get();
+        return view('dashboard.admin.index',compact('users','investors','farmers'));
+    }
+    public function users()
     {
         $users=User::paginate(5);
         return view('dashboard.admin.users',compact('users'));
     }
     public function farmers(){
-        $users=User::whereUser_type('farmer')->get();
-        return view('dashboard.admin.farmers',compact('users'))
+        $users=User::whereUser_type('farmer')->paginate(5);
+        return view('dashboard.admin.farmers',compact('users'));
+    }
+    public function admin($id,$admin){
+        $user=User::whereId($id)->first();
+        $user->isAdmin=$admin;
+        $user->save();
+        Session::flash('success','Successfully Updated');
+        return redirect()->back();
+    }
+    public function eachfarmers($id){
+        $user=User::whereId($id)->first();
+        return view('dashboard.admin.farmerdetails',compact('user'));
     }
 
     /**
@@ -26,6 +43,7 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         //
