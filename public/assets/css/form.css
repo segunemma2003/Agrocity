@@ -10,50 +10,59 @@
 
 /* origina */
 
-/*body{
-    background-image: url("{{ asset('assets/images/agrocity.jpg')}}") no-repeat;
-    background-size:cover;
+body{
+    background-color: #27AE60;
 }
-*/
 /* form styles */
+
+#msform{
+    background-color:white;
+    /* text-align:center; */
+    margin:0 auto;
+    border: solid white 2px;
+    /* opacity:0.8; */
+    position:relative;
+    /* height:100%; */
+    /* margin-bottom: 10px; */
+    margin-top:10px;
+    padding-top: 3%;
+
+    
+}
+.format{
+    text-align:left;
+}
 .radio{
     width: 5% !important;
 }
-.dd{
-    width: 80%;
-    float: right;
-}
-#msform{
-    width:60%;
-    margin:0 auto;
-    text-align:center;
-    opacity:0.8;
-    position:relative;
-    background-color:white;
+@media (min-width: 320px) and (max-width: 480px) {
+    .format{
+        text-align:left!important;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
     #msform{
         width:80%;
         margin:0 auto;
-        text-align:center;
-        opacity:0.8;
+        
         position:relative;
         background-color:white;
     }
 }
 
 #msform fieldset{
-    background:white;
+    background-color:#27AE60;
+ 
     border:0 none;
     border-radius:3px;
-    box-shadow: 0 15px 1px rgba(0,0,0,0.4 );
-    padding:10px 20px;
+    /* box-shadow: 0 0 15px 1px rgba(0,0,0,0.4 ); */
+    padding:25px 20px;
     box-sizing:border-box;
-    width:100%;
+
     margin:0 auto;
     /* stacking fieldsets above each other*/
-    position:absolute;
+    /* position:absolute; */
 }
 
 
@@ -62,7 +71,7 @@
     display:none;
 }
 .upload{
-    padding:7px !important;
+    padding:7px;
     border:1px solid #ccc;
     border-radius:none!important;
     margin-bottom:10px;
@@ -76,10 +85,9 @@
 }
 label {
     /* Other styling.. */
-    text-align: right;
     clear: both;
     /* float:right; */
-    margin-right:15px;
+    margin-right:none;
     margin-top:10px;
     font-family:montserrat;
     color:#2c3e50;
@@ -90,23 +98,11 @@ label {
 /* #msform fieldset:not(:first-of-type){
     display:none;
 } */
-.radiolabel{
-    margin-left:20px;
-    display:inline-block;
-}
 
-.newmargin{
-    margin-left:-50px;
-}
- /* for phones */
- @media (min-width: 320px) and (max-width: 480px) {
-    .newmargin{
-        margin-left:0px;
-    } 
- }
+
 /* inputs */
-#msform input, msform textarea msform select{
-    padding:15px;
+#msform input,#msform select{
+    padding:15px !important;
     border:1px solid #ccc;
     border-radius:3px;
     margin-bottom:10px;
@@ -116,8 +112,13 @@ label {
     color:#2c3e50;
     font-size:13px;
 }
+/* #msform select option{
+    padding:100%;
+} */
+
 /* buttons */
 #msform .action-button{
+    
     width:100px;
     background:#27AE60;
     font-weight:bold;
@@ -135,7 +136,8 @@ label {
 
 /* headings */
 .fs-title{
-    font-size:15px;
+    text-align:center;
+    font-size:20px;
     text-transform:uppercase;
     color:#2c3e50;
     margin-bottom:10px;
@@ -143,6 +145,7 @@ label {
 }
 
 .fs-subtitle{
+    text-align:center;
     font-weight:normal;
     font-size:13px;
     color:#666;
@@ -160,6 +163,7 @@ label {
 #progressbar li{
     list-style-type:none;
     color:#27AE60;
+    text-align: center;
     text-transform:uppercase;
     font-size:9px;
     width:20%;
@@ -167,6 +171,7 @@ label {
     position:relative;
 }
 #progressbar li:before{
+    text-align:center;
     content:counter(step);
     counter-increment:step;
     width:20px;
@@ -175,10 +180,10 @@ label {
     font-size:10px;
     color:#27AE60;
     background:white;
-    border-radius:4px;
+    border-radius:50%;
     margin:0 auto 5px auto;
-    border: 2px solid #27AE60
-
+    border: 2px solid #27AE60;
+    z-index: -5;
 }
 
 /* progress bar connectors */
@@ -190,7 +195,7 @@ label {
     position:absolute;
     left:-50%;
     top:9px;
-    z-index:-1;
+    z-index: -1;
  /*put it behind the numbers*/
 }
 #progressbar li:first-child:after {
@@ -206,7 +211,7 @@ label {
 input.required:before {
     content: "* ";
 }
-.drop{
+/* .drop{
     width:100px;
     background:white;
     font-weight:bold;
@@ -216,7 +221,7 @@ input.required:before {
     cursor:pointer;
     padding:10px 5px;
     margin:10px 5px;
-}
+} */
 span{
     margin:0px auto;
     width:100%;
@@ -225,3 +230,4 @@ span{
     font-size:13px;
     
 }
+
