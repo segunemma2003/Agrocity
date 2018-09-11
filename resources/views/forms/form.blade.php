@@ -29,8 +29,8 @@
                 </div>
                 <div class="text-center">
                         <img src="{{ asset('assets/images/agrocity.jpg')}}" class="rounded" alt="logo" style="margin-top:3%; width:10%; height:10%;">
-                        <h3 style="color:white;">Welcome potential Agrocity farmer</h3>
-                        <h5 style="color:white;">Proceed with your registration</h5>
+                        <h4 style="color:white;">Welcome potential Agrocity farmer!</h4>
+                        <h6 style="color:white;">Proceed with your registration</h6>
                       </div>
                 
                 <div class="row">
@@ -140,16 +140,16 @@
                                                         <input type="text" class="form-control" id="town" placeholder=Town required>
                                                 </div>
                                 </div>
-<div class="text-center">
+<!-- <div class="text-center"> -->
                                 <small id="help" class="form-text text-muted">Please ensure the informations provided are correct</small>
-                                <input type="button" name="next" class="next action-button" value="Next"/>
-</div>
+                                <input type="button" name="next" class="text-center next action-button" value="Next"/>
+<!-- </div> -->
                         </fieldset>
                     <!-- <div style="height:40px;"></div> -->
                     <!-- Business Profiles -->
                     <fieldset>
                         <h2 class="fs-title">Business Profiles</h2>
-                        <small id="help" class="form-text text-muted">All fields are required</small>
+                        <h3 class="fs-subtitle">All fields are required</h3>
                         <br></br>
 
                         <div class="form-group row">
@@ -223,7 +223,7 @@
                         <!-- Referee -->
                         <fieldset>
                                 <h2 class="fs-title">Referees</h2>
-                                <small id="help" class="form-text text-muted">All fields are required</small>
+                                <h3 class="fs-subtitle">All fields are required</h3>
                                 <br></br>
                                 <div class="form-group row">
                                    <label for="rname" class="col-sm-2 col-form-label">Name of Referee</label>
@@ -270,7 +270,8 @@
                         <!-- Uploads -->
                         <fieldset>
                                 <h2 class="fs-title">Uploads</h2>
-                                <small id="help" class="form-text text-muted">Picture sizes should not exceed 500kb</small>
+                                <h3 class="fs-subtitle">Picture sizes should not exceed 500kbd</h3>
+                                
                                 <br></br>
                                 <div class="row ">
                                         <div class="col-md-5">
