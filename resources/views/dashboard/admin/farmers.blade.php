@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="page-head-line">my investors/sponsors</h4>
+                    <h4 class="page-head-line">All Users</h4>
                 </div>
 
             </div>
@@ -28,30 +28,30 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Name</th>
-                                            <th>Location</th>
-                                            <th>Amount</th>
-                                            <th>status</th>
+                                            <th><a href="#">Name</a></th>
+                                            <th>Farm Produce</th>
+                                            <th>Date of Application</th>
+                                            <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td>Daniel Chinagozi</td>
+                                            <td>Cattle</td>
+                                            <td>Male</td>
+                                            <td>Pending <i class=" fa status"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Ezinne Uzoije</td>
                                             <td>Lagos</td>
-                                            <td>N 90, 000</td>
-                                            <td>Current</td>
+                                            <td>Female</td>
+                                            <td>Make admin</td>
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>Daniel Chinagozi</td>
-                                            <td>Lagos</td>
-                                            <td>N 90, 000</td>
-                                            <td>Current</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Daniel Chinagozi</td>
+                                            <td>Josh Onwughalu</td>
                                             <td>Lagos</td>
                                             <td>N 90, 000</td>
                                             <td>Current</td>

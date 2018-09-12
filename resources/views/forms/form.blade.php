@@ -29,7 +29,7 @@
                 </div>
                 <div class="text-center">
                         <img src="{{ asset('assets/images/agrocity.jpg')}}" class="rounded" alt="logo" style="margin-top:3%; width:10%; height:10%;">
-                        <h4 style="color:white;">Welcome potential Agrocity farmer!</h4>
+                        <h4 style="color:white;">Welcome potential Agrocity farmer</h4>
                         <h6 style="color:white;">Proceed with your registration</h6>
                       </div>
                 
@@ -141,7 +141,7 @@
                                                 </div>
                                 </div>
 <!-- <div class="text-center"> -->
-                                <small id="help" class="form-text text-muted">Please ensure the informations provided are correct</small>
+                                <small id="help" class="form-text text-center text-muted">Please ensure the informations provided are correct</small>
                                 <input type="button" name="next" class="text-center next action-button" value="Next"/>
 <!-- </div> -->
                         </fieldset>

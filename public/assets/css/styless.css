@@ -1008,7 +1008,7 @@ section .section-title {
 .reg-card {
   padding: 20px!important;
   margin-top: 30px!important;
-  background-color: #black!important;
+  background-color: black!important;
   color: #fff;
 }
 
@@ -1029,4 +1029,29 @@ section .section-title {
   font-size: 2em;
   margin-top: 50px;
   text-align: center;
+}
+@keyframes amara{
+  0%{
+      background-color:grey;
+  }
+  25%{
+      background-color:white;
+  }
+  75%{
+      background-color:grey;
+  }
+  100%{
+      background-color:white;
+  }
+}
+.status{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background-color:red;
+  animation-name: amara;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: reverse;
+
 }
